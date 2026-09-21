@@ -1,0 +1,26 @@
+.tab-background {
+  &:is([selected], [multiselected]) {
+    /* background-color: var(--tab-background-color-selected); */
+    background: #A0A0A0;
+    background: linear-gradient(0deg,rgba(160, 160, 160, 1) 0%, rgba(150, 150, 150, 1) 100%);
+  }
+  margin-block: 0;
+  min-height: 22px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+#tabbrowser-tabs {
+  &[orient="horizontal"] {
+    min-height: 22px;
+    max-height: 22px !important;
+  }
+}
+
+.tab-content {
+  height: 22px;
+}
+
+#tabs-newtab-button, #vertical-tabs-newtab-button, #TabsToolbar #new-tab-button {
+  background: none;
+  height: 22px;
+}

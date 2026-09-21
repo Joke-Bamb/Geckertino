@@ -1,9 +1,5 @@
 // Safari 1.0 - 3.0
-//:root[safari1-3] {
- @import "browser/safari1/index";
-//}
-
-// Safari 4.0
-:root[safari4] {
-    @import "browser/safari4/index";
+:root[gksafari-1] {
+    @import "browser/safari1/index";
+    @import "browser/safari1/tabs";
 }

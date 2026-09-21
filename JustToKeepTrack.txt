@@ -1,0 +1,107 @@
+// Main Toolbar
+#nav-bar-customization-target {
+  display: flex !important;
+  align-items: center !important;
+}
+.browser-toolbar {
+  @media (not -moz-pref("sidebar.verticalTabs")) or (-moz-pref("sidebar.verticalTabs") and -moz-pref("browser.nova.enabled")) {
+    &:not(.browser-titlebar) {
+      color: var(--toolbar-text-color);
+      background: #C5C5C5;
+      background: linear-gradient(180deg, rgba(197, 197, 197, 1) 0%, rgba(150, 150, 150, 1) 100%);
+    }
+  }
+}
+#nav-bar {
+  min-height: 30px !important;
+  max-height: 30px !important;
+  position: relative;
+  border-top: 0.01px var(--tabs-navbar-separator-style) var(--tabs-navbar-separator-color);
+}
+toolbar .toolbarbutton-1 {
+  & > .toolbarbutton-icon, & > .toolbarbutton-text, & > .toolbarbutton-badge-stack {
+    border-radius: 3.5px;
+    outline-offset: var(--toolbarbutton-outline-offset);
+    overflow-clip-margin: padding-box;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 1px solid #4e4e4e;
+    background: #FEFEFE;
+    background: linear-gradient(180deg, rgba(254, 254, 254, 1) 0%, rgba(184, 184, 184, 1) 100%);
+    -webkit-box-shadow: 0px 1px 0px 0px rgba(255,255,255,0.34);
+    box-shadow: 0px 1px 0px 0px rgba(255,255,255,0.34);
+  }
+}
+.urlbar-background {
+  display: block;
+  position: absolute;
+  inset: 0;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: 3.5px;
+  border: 1px solid #4e4e4e;
+}
+#urlbar {
+  min-height: 22px;
+  max-height: 22px;
+  align-items: center !important;
+  display: flex !important;
+}
+
+// Bookmarks Bar
+#PersonalToolbar {
+  background: #969696;
+  overflow: clip;
+  max-height: 22px;
+  min-height: 0;
+  padding-inline: var(--space-small);
+  --toolbarbutton-padding-inner: 4px;
+  --toolbarbutton-padding-outer: 2px;
+}
+.bookmark-item {
+  color: #1e1e1e;
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.34);
+}
+.bookmark-item > .toolbarbutton-icon {
+  width: 16px;
+  height: 16px;
+  display: none;
+}
+
+// Tabs Bar
+#TabsToolbar {
+  order: 10;
+  background: #838383;
+  background: linear-gradient(180deg, rgba(131, 131, 131, 1) 0%, rgba(138, 138, 138, 1) 100%);
+}
+#tabbrowser-tabs, #tabbrowser-tabs > #tabbrowser-arrowscrollbox, .tabbrowser-tabs .tabbrowser-tab {
+  min-height: 22px !important;
+  max-height: 22px !important;
+}
+.tab-background {
+  border-radius: 0px 0px 5px 5px;
+  margin-block: 0;
+  min-height: 22px;
+  outline: var(--tab-outline);
+  outline-offset: var(--tab-outline-offset);
+}
+.tab-background {
+  &:is([selected], [multiselected]) {
+    background-color: #969696;
+    background: linear-gradient(180deg,rgba(150, 150, 150, 1) 0%, rgba(160, 160, 160, 1) 100%);
+    outline-color: var(--tab-selected-outline-color);
+    box-shadow: var(--tab-box-shadow-selected);
+  }
+}
+.tab-content {
+  height: 22px;
+}
+.tab-label {
+  margin-inline: 0;
+  line-height: var(--tab-label-line-height);
+  white-space: nowrap;
+  color: #1e1e1e;
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.34);
+}
